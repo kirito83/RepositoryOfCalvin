@@ -1,0 +1,3 @@
+Dans un premier temps, mon bot like tous les profils twitter des journalistes présents dans la variable journalistes. 
+Ensuite, il va liker tous les tweets des jouralistes en question.
+Enfin, il poste un message sur mon mur concernant THP en identifiant tous les journalistes.
