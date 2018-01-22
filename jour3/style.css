@@ -1,0 +1,201 @@
+@font-face
+{
+	font-family: 'Arimo';
+	src: url('Arimo-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+	font-family: 'Arimo';
+	font-style: italic;
+	src: url('Arimo-Italic.ttf') format('truetype');
+}
+
+@font-face
+{
+	font-family: 'Arimo';
+	font-style: bold;
+	src: url('Arimo-bold.ttf') format('truetype');
+}
+
+body
+{
+	font-family: 'Arimo';
+	font-style: normal;
+	font-weight: normal;
+}
+
+#top
+{
+	display: inline-flex;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.gmaillink
+{
+	border-width: 8px 9px 10px 10px;
+	border-style: solid;
+	border-color: white;
+	margin-top: 8px;
+	color: #434343;
+}
+.gmaillink:hover
+{
+   color: #414141;
+   text-decoration: underline;
+}
+
+.imglink
+{
+	border-width: 8px 22px 10px 10px;
+	border-style: solid;
+	border-color: white;
+	margin-top: 8px;
+	color: #434343;
+}
+.imglink:hover
+{
+   color: #414141;
+   text-decoration: underline;
+}
+.connexionb
+{
+	width: 65px;
+	line-height: 28px;
+	color: #ffffff;
+	display: inline-block;
+	background-color: #4888f0;
+	text-align: center;
+	padding: 0 12px;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-radius: 2px 2px 2px 2px;
+	border-color: #4888f0;
+	font-size: 13px;
+	margin-left: 24px;
+	margin-top: 8px;
+	margin-right: 22px;
+   font-weight: bold;
+}
+
+.image
+{
+	width: 15px;
+	margin-top: 7px;
+
+}
+
+.sec
+{
+	display: block;
+	height: 233px;
+	margin-top: 89px;
+	text-align: center;
+	padding-top: 60px;
+}
+.logo
+{
+	height: 92px;
+	width: 272px;
+	text-align: center;
+
+	
+}
+#searchbar 
+{
+	position: relative;
+	left: 350px;
+	bottom: 115px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.formulaire
+{
+	display: inline-block;
+	box-shadow: 1px 2px 3px #C4C4C4;
+
+}
+
+.champ
+{
+	width: 575px;
+	height: 46px;
+}
+
+.dblbouton
+{
+	width: 100%;
+	margin: 10px;
+	display: inline-block;
+	text-align: center;
+
+}
+
+.bouton
+{
+	width: 130px;
+	background-color: #F7F7F7;
+	color: #222222;
+
+}
+
+.bouton2
+{
+	width: 130px;
+	background-color: #F7F7F7;
+	color: #222222;
+}
+
+a
+{
+	text-decoration: none;
+   color: #71718F;
+   font-size: 12px;
+}
+
+footer
+{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   background-color: #F2F2F2;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+.bottombottom
+{
+   display: flex;
+   justify-content: space-between;
+}
+
+nav
+{
+   padding-top: 10px;
+   padding-left: 30px;
+   padding-right: 30px;
+   padding-bottom: 10px;
+   border: 1px #CCCCCC solid;
+}
+
+.france
+{
+   color: #71718F;
+}
+
+.publink, .entrepriselink, .aproposlink
+{
+   display: inline-block;
+   margin-right: 25px;
+}
+
+.confidentialitelink, .conditionslink, .parametreslink
+{
+   display: inline-block;
+   margin-left: 25px;
+}
