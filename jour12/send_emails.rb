@@ -2,7 +2,7 @@ require 'gmail'
 require 'google_drive'
 
 def send_email_to_line(email, name)
-   gmail = Gmail.connect("calvinator8313@gmail.com", "Marseille@8313")
+   gmail = Gmail.connect("calvinator8313@gmail.com", "")
    gmail.deliver do
       to email 
       subject "Projet The Hacking Project"
