@@ -194,7 +194,7 @@ class Player
    attr_reader :name
    attr_accessor :etat
 
-   def initialize(name, victory = false)
+   def initialize(name, etat = false)
       @name = name
       @etat = etat
    end
@@ -302,6 +302,9 @@ class Game
       # On regarde pour quelle raison la partie s'est terminée et on écrit un message en conséquence.
 
       if @player1.etat == true
+      :q
+      :q
+:q
          puts "#{@player1.name} à gagné la partie!"
       elsif @player2.etat == true
          puts "#{@player2.name} à gagné la partie!"
@@ -320,7 +323,7 @@ def joue
 
    print "Entrez le pseudo du joueur 1 : "
    name_joueur1 = gets.chomp
-   print "Entrez le nom du joueur 2 : "
+   print "Entrez le pseudo du joueur 2 : "
    name_joueur2 = gets.chomp
    puts ""
 
