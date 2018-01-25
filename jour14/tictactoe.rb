@@ -122,7 +122,7 @@ class Board
       elsif @case2.value == @case5.value && @case5.value == @case8.value
          if @case2.value == 'X'
             return 1
-         elsif @case2.value == 'X'
+         elsif @case2.value == 'O'
             return 2
          end
       elsif @case3.value == @case6.value && @case6.value == @case9.value
