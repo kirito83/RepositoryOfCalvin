@@ -208,10 +208,15 @@ class Game
 
    # Initialisation des joueurs.
 
-   def initialize(name_player1, name_player2)
+   def initialize
+      @board = Board.new
+      print "Entrez le pseudo du joueur 1 : "
+      name_player1 = gets.chomp
+      print "Entrez le pseudo du joueur 2 : "
+      name_player2 = gets.chomp
       @player1 = Player.new(name_player1)
       @player2 = Player.new(name_player2)
-      @board = Board.new
+      puts ""
    end
 
    # Fonction qui leurs permet de s'affronter.
@@ -316,20 +321,4 @@ class Game
 
 end
 
-
-# La fonction joue demande le nom des joueurs et lance la partie.
-
-def joue
-
-   print "Entrez le pseudo du joueur 1 : "
-   name_joueur1 = gets.chomp
-   print "Entrez le pseudo du joueur 2 : "
-   name_joueur2 = gets.chomp
-   puts ""
-
-   game = Game.new(name_joueur1, name_joueur2)
-   game.play
-
-end
-
-joue()
+Game.new.play
