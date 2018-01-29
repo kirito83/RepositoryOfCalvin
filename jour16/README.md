@@ -44,7 +44,7 @@ Vous l'aurez donc compris, cette architecture va être utilisée dans la créati
 #### Fonctionnement
 
 * Tout d'abord, la demande de l'utilisateur est récuperée.
-* En fonction de cette demande, les routes vont permettrent de dire au controller quelles sont les fonctions qu'il faut traiter.
+* En fonction de cette demande, les routes vont permettres de choisir le bon Controller et de lui donner les fonctions à traiter.
 * Le Controller va récuperer toutes les données nécessaires à la demande dans la Base de Données grace au Model.
 * Ensuite, le Controller va demander à View le html correspondant aux données récupérées.
 * Enfin, le Controller renvoie le code html au navigateur pour afficher la page souhaitée.
@@ -55,5 +55,24 @@ Vous l'aurez donc compris, cette architecture va être utilisée dans la créati
 
 
 ## 3. Les routes
-	
-Sert a definir quel controller va etre utilise en fonction de l'URL du site.
+
+#### Intérêts
+
+Les routes permettent d'**interpréter les URLs** et de dire au Controller les fonctions qu'il faut traiter.
+
+#### Fonctionnement
+
+Les routes se configurent dans le fichier _config/routes.rb_.
+
+**Commandes :**
+
+Les commandes doivent être tapées dans le bloc :
+```ruby
+Rails.application.routes.draw do
+end
+```
+
+* Pour dire : "Je veux lancer la fonction '_exempleFonction_' du Controller '_ExempleController_' si l'utilisateur tape '_exemple_' dans l'URL, il faut taper la commande : "
+```ruby
+get 'exemple', to: 'ExempleController#exempleFonction'
+```
