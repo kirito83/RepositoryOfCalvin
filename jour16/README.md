@@ -18,10 +18,12 @@
 
 ## 1. La différence entre un site statique et un site dynamique
 
-Dans un site web **statique**, le contenue des pages du site ne varie pas en fonction des caractéristiques de la demande (heure, adresse IP de l'ordianteur de l'utilisateur etc..)
-Plus simplement, les pages qu'un utilisateur va voir à un instant t seront **les mêmes** pour tous les utilisateurs qui regarderont la page à ce même instant t.
+Dans un site web **statique**, le contenu des pages du site ne varie pas en fonction des caractéristiques de la demande (heure, adresse IP de l'ordianteur de l'utilisateur etc..)
+Plus simplement, les pages qu'un utilisateur va voir à un _instant t_ seront **les mêmes** pour tous les utilisateurs qui regarderont la page à ce même instant.
 
 Dans un site **dynamique**, les pages sont personnalisées en fonction des demandes.
+
+**Exemples :**
 
 [Voici un exemple d'un site statique](https://thebestmotherfucking.website/)
 
@@ -41,17 +43,17 @@ Enfin, le **Controller** permet d'intéragir avec le Model, le View, les routes 
 
 #### Intérêts
 
-Le MVC va permettre de créer des pages personnalisées a partir d'informations écrites dans l'URL par l'utilisateur (ou en cliquant sur des liens).
+Le **MVC** va permettre de créer des pages personnalisées à partir d'informations écrites par l'utilisateur dans l'_URL_, dans un _formulaire_ ou en cliquant sur un _lien_.
 
 Vous l'aurez donc compris, cette architecture va être utilisée dans la création de sites **dynamiques**.
 
 #### Fonctionnement
 
 * Tout d'abord, la demande de l'utilisateur est récuperée.
-* En fonction de cette demande, les routes vont permettres de choisir le bon Controller et de lui donner les fonctions à traiter.
-* Le Controller va récuperer toutes les données nécessaires à la demande dans la Base de Données grace au Model.
-* Ensuite, le Controller va demander à View le html correspondant aux données récupérées.
-* Enfin, le Controller renvoie le code html au navigateur pour afficher la page souhaitée.
+* En fonction de cette demande, **les routes** vont permettre de choisir le bon **Controller** et de lui donner les **fonctions** à traiter.
+* Le **Controller** va récuperer toutes les données nécessaires à la demande dans la **Base de Données** grâce au **Model**.
+* Ensuite, le **Controller** va demander à **View** le _html_ correspondant aux données récupérées.
+* Enfin, le **Controller** renvoie le _code html_ au _navigateur_ pour afficher la page souhaitée.
 
 #### Illustration 
 
@@ -69,7 +71,7 @@ Les routes permettent d'**interpréter les URLs** et de dire au Controller les f
 
 #### Commandes
 
-Les routes se configurent dans le fichier _config/routes.rb_.
+Les **routes** se configurent dans le fichier _config/routes.rb_.
 
 Les commandes doivent être tapées dans le bloc :
 ```ruby
@@ -92,19 +94,19 @@ resources :exempleControllers
 
 <br/>
 
-## 4. Les Base de Données
+## 4. Les Bases de Données (BDD)
 
 #### Intérêts
 
 Une **Base de Données** est un ensemble structuré et organisé de données.
 
-De ce fait, les programmes intéragissants avec des Base de Données vont pouvoir accéder facilement aux données voulues.
+De ce fait, les programmes intéragissants avec des BDDs vont pouvoir **accéder facilement** aux données voulues.
 
 Evidemment, cet ensemble est utilisé pour les sites **dynamiques**.
 
 #### Fonctionnement
 
-On peut par exemple se représenter une Base de Données comme un _spreadsheet drive_.
+On peut par exemple se représenter une **BDD** comme un _spreadsheet drive_.
 
 Les données vont posséder une **ID**, ainsi que **différentes caractéristiques**.
 
@@ -120,11 +122,11 @@ Ensuite, une fois les données récupérées, nous pourrons récupérer **leurs 
 
 La requête **GET** récupère des données ajoutées à l'URI (URL ou URN).
 
-_Ces données sont visibles par tous_
+_Ces données sont visibles par tous._
 
 La requête **POST** récupère des données inscrites dans un formulaire.
 
-_Ces données sont invisibles_
+_Ces données sont invisibles._
 
 Cette requête est utilisée la plupart du temps pour _créer_ une nouvelle resource ou pour en _modifier_ une déjà existante.
 
@@ -136,20 +138,20 @@ Cette requête est utilisée la plupart du temps pour _créer_ une nouvelle reso
 
 Les migrations permettent de **faire évoluer les schémas de Base de Données** au fil du temps.
 
-On peut voir cela comme une _simplification du language_ pour la modification de Bases de Données.
+On peut voir cela comme une _simplification du language_ pour la modification de BDDs.
 
-Aussi, les migrations permettent aux modifications apportées d'être **indépendantes** de la Base de Donnée.
+Aussi, les migrations permettent aux modifications apportées d'être **indépendantes** de la BDD.
 
 #### Fonctionnement
 
-Pour faire des **migrations**, il faut tout d'abord **renseigner les caractéristiques** des Bases de Données que l'on veut migrer dans le fichier _db/migrate/schema.rb_. 
+Pour faire des **migrations**, il faut tout d'abord **renseigner les caractéristiques** des BDDs que l'on veut migrer dans le fichier _db/migrate/schema.rb_. 
 
 Ces **caractéristiques** doivent êtres renseignées dans le bloc
 ```ruby
 create_table "articles", force: :cascade do |t|
 end
 ```
-Lui-même inclut dans le bloc
+Lui-même inclu dans le bloc
 ```ruby
 ActiveRecord::Schema.define(version: 20180129144122) do
 end
@@ -157,7 +159,7 @@ end
 
 **Exemple :**
 
-Pour créer une Base de Données contenant des _articles_ qui possèdent un titre, un corpus, une date de création et une date de modification, il faut taper :
+Pour créer une BDD contenant des _articles_ qui possèdent un titre, un corpus, une date de création et une date de modification, il faut taper :
 ```ruby
 ActiveRecord::Schema.define(version: 20180129144122) do
 
@@ -177,11 +179,11 @@ Enfin, il suffit de taper la commande `db:migrate` dans la _console_.
 
 ## 7. Les relations entre les models des BDD
 
-Un modèle de Base de Données distingue **la structure d'une Base de Données**.
+Un modèle de BDD distingue **la structure d'une Base de Données**.
 
 Il est souvent conçu en fonction des règles et concepts du modèle plus général adopté par les concepteurs.
 
-Ce modèle peut se représenter par un diagramme de Base de Données.
+Ce modèle peut se représenter par un _diagramme de Base de Données_.
 
 Voici un exemple de diagramme :
 
@@ -195,9 +197,9 @@ Voici un exemple de diagramme :
 
 L'abréviation **CRUD** signifie : Create Read Update Delete.
 
-Celui-ci désigne les **quatres actions de base** pour la gestion des Bases de Données relationnelles.
+Celui-ci désigne les **quatres actions de base** pour la gestion des BDDs.
 
-Voici un tableau qui montre les fonctions du CRUD :
+Voici un tableau qui montre les fonctions du **CRUD** :
 
 |**Opération**|**SQL**   |**HTTP**|
 |:---|:---:|:---:|
@@ -210,7 +212,7 @@ Voici un tableau qui montre les fonctions du CRUD :
 
 ___
 
-J'espère que cette explication vous aura servie.
+J'espère que cette explication vous aura servi.
 
 N'hésitez pas à me contacter sur slack pour toute question --> calvin8313
 
