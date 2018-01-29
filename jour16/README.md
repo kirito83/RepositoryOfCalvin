@@ -207,7 +207,8 @@ Voici un tableau qui montre les fonctions du CRUD :
 |Delete|DELETE|DELETE|
 
 <br/>
-<br/>
+
+___
 
 J'espère que cette explication vous aura servie.
 
