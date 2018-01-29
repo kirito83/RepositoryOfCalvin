@@ -60,11 +60,9 @@ Vous l'aurez donc compris, cette architecture va être utilisée dans la créati
 
 Les routes permettent d'**interpréter les URLs** et de dire au Controller les fonctions qu'il faut traiter.
 
-#### Fonctionnement
+#### Commandes
 
 Les routes se configurent dans le fichier _config/routes.rb_.
-
-**Commandes :**
 
 Les commandes doivent être tapées dans le bloc :
 ```ruby
@@ -72,7 +70,15 @@ Rails.application.routes.draw do
 end
 ```
 
-* Pour dire : "Je veux lancer la fonction '_exempleFonction_' du Controller '_ExempleController_' si l'utilisateur tape '_exemple_' dans l'URL, il faut taper la commande : "
+* Pour dire : Je veux lancer la fonction "_exempleFonction_" du Controller "_ExempleController_" si l'utilisateur tape "_exemple_" dans l'URL, il faut taper la commande :
 ```ruby
 get 'exemple', to: 'ExempleController#exempleFonction'
+```
+* Pour définir une fonction "_exempleFonction_" du Controller "_ExempleController_" en tant que **page d'accueil**, il suffit de taper la commande :
+```ruby
+root 'ExempleController#exempleFonction'
+```
+* Il existe une fonction permettant de créer automatiquement plusieurs routes de base pour un Controller. Si le Controller s'appelle _"ExempleController"_, alors il suffit de taper la commande :
+```ruby
+resources :exempleControllers
 ```
