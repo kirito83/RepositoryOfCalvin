@@ -1,6 +1,6 @@
 # Bonjour et bienvenu dans ce README!
 
-## Dans ce READMDE nous allons tenter d'expliquer les notions suivantes :
+### Dans ce READMDE nous allons tenter d'expliquer les notions suivantes :
 
 * La différence entre un site statique et un site dynamique
 * Le MVC
@@ -21,6 +21,7 @@ Plus simplement, les pages qu'un utilisateur va voir à un instant t seront **le
 Dans un site **dynamique**, les pages sont personnalisées en fonction des demandes.
 
 [Voici un exemple d'un site statique](https://thebestmotherfucking.website/)
+
 [Et voici un exemple d'un site dynamique](https://www.facebook.com/)
 
 ## 2. Le MVC
@@ -28,10 +29,14 @@ Dans un site **dynamique**, les pages sont personnalisées en fonction des deman
 L'abréviation MVC signifie : Model View Controller
 
 Le **Model** permet d'intéragir avec la Base de Données pour récupérer les données désirées.
+
 Le **View** contient le code HTML de la page désirée.
+
 Enfin, le **Controller** permet d'intéragir avec le Model, le View, les routes et le navigateur pour afficher le résultat attendu.
 
+
 ![Schéma du MVC](http://french.railstutorial.org/images/figures/mvc_detailed.png)
+
 
 Le MVC va permettre de creer des pages personnalisees a partir d'informations ecrites par l'utilisateur (ou par un lien) dans l'URL d'un site.
 Tout d'abord, le MVC va recuperer la valeur ecrite par l'utilisateur.
