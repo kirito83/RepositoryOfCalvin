@@ -35,21 +35,25 @@ Le **View** contient le code HTML de la page désirée.
 
 Enfin, le **Controller** permet d'intéragir avec le Model, le View, les routes et le navigateur pour afficher le résultat attendu.
 
+#### Intérêts
 
-Voici une petit illustration : 
+Le MVC va permettre de créer des pages personnalisées a partir d'informations écrites dans l'URL par l'utilisateur (ou en cliquant sur des liens).
+
+Vous l'aurez donc compris, cette architecture va être utilisée dans la création de sites **dynamiques**.
+
+#### Fonctionnement
+
+Tout d'abord, la demande de l'utilisateur est récuperée.
+En fonction de cette demande, les routes vont permettrent de dire au controller quelles sont les fonctions qu'il faut traiter.
+Le Controller va récuperer toutes les données nécessaires à la demande dans la Base de Données grace au Model.
+Ensuite, le Controller va demander à View le html correspondant aux données récupérées.
+Enfin, le Controller renvoie le code html au navigateur pour afficher la page souhaitée.
+
+#### Illustration 
 
 ![Schéma du MVC](http://french.railstutorial.org/images/figures/mvc_detailed.png)
 
 
-Le MVC va permettre de creer des pages personnalisees a partir d'informations ecrites par l'utilisateur (ou par un lien) dans l'URL d'un site.
-Tout d'abord, le MVC va recuperer la valeur ecrite par l'utilisateur.
-Ensuite, il va chercher dans routes.rb quel sous dossier du dossier controller il faut traiter.  
-Le Controlleur va recuperer toutes les donnees necessaires de la base de donnee grace au Model et va le stocker dans un tableau.
-Ensuite, le Controller va chercher le fichier correspondant dans le dossier View pour recuperer le html de la page personnalisee en fonction de l'utilisateur.
-Enfin, le Controlleur renvoie le code html au navigateur pour afficher la page de l'utilisateur.
-
-
-
-Les routes
+## 3. Les routes
 	
 Sert a definir quel controller va etre utilise en fonction de l'URL du site.
