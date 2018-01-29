@@ -1,4 +1,4 @@
-# Bonjour et bienvenu dans ce README!
+# Bonjour et bienvenue dans ce README!
 
 <br/>
 <br/>
@@ -59,7 +59,6 @@ Vous l'aurez donc compris, cette architecture va être utilisée dans la créati
 
 ![Schéma du MVC](http://french.railstutorial.org/images/figures/mvc_detailed.png)
 
-<br/>
 <br/>
 
 ## 3. Les routes
@@ -178,3 +177,14 @@ Enfin, il suffit de taper la commande `db:migrate` dans la _console_.
 
 ## 7. Les relations entre les models des BDD
 
+Un modèle de Base de Données distingue **la structure d'une Base de Données**.
+
+Il est souvent conçu en fonction des règles et concepts du modèle plus général adopté par les concepteurs.
+
+Ce modèle peut se représenter par un diagramme de Base de Données.
+
+Voici un exemple de diagramme :
+
+<br/>
+
+![Diagramme de Base de Données](http://gardeux-vincent.eu/Documents/ProjetJEE/FCTAP_iBatis_Struts1/css/img/uml_forum.png)
