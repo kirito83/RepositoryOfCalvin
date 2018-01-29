@@ -3,7 +3,7 @@
 <br/>
 <br/>
 
-### Dans ce READMDE nous allons tenter d'expliquer les notions suivantes :
+### Aujourd'hui je vais tenter de vous expliquer les notions suivantes :
 
 * La différence entre un site statique et un site dynamique
 * Le MVC
@@ -31,7 +31,7 @@ Dans un site **dynamique**, les pages sont personnalisées en fonction des deman
 
 ## 2. Le MVC
 
-L'abréviation MVC signifie : Model View Controller
+L'abréviation **MVC** signifie : Model View Controller.
 
 Le **Model** permet d'intéragir avec la Base de Données pour récupérer les données désirées.
 
@@ -188,3 +188,28 @@ Voici un exemple de diagramme :
 <br/>
 
 ![Diagramme de Base de Données](http://gardeux-vincent.eu/Documents/ProjetJEE/FCTAP_iBatis_Struts1/css/img/uml_forum.png)
+
+<br/>
+
+## 8. Les fonctions du CRUD
+
+L'abréviation **CRUD** signifie : Create Read Update Delete.
+
+Celui-ci désigne les **quatres actions de base** pour la gestion des Bases de Données relationnelles.
+
+Voici un tableau qui montre les fonctions du CRUD :
+
+|**Opération**|**SQL**   |**HTTP**|
+|:---|:---:|:---:|
+|Create|INSERT|POST|
+|Read|SELECT|GET|
+|Update|UPDATE|PUT|
+|Delete|DELETE|DELETE|
+
+<br/>
+
+J'espère que cette explication vous aura servie.
+
+N'hésitez pas à me contacter sur slack pour toute question --> calvin8313
+
+Bonne journée et bon courage pour la suite de cette aventure !
