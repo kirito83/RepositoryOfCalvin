@@ -1,5 +1,7 @@
 # Bonjour et bienvenu dans ce README!
 
+<br/>
+<br/>
 
 ### Dans ce READMDE nous allons tenter d'expliquer les notions suivantes :
 
@@ -12,6 +14,7 @@
 * Les relations entre les models des BDD
 * Les fonctions du CRUD
 
+<br/>
 
 ## 1. La différence entre un site statique et un site dynamique
 
@@ -24,6 +27,7 @@ Dans un site **dynamique**, les pages sont personnalisées en fonction des deman
 
 [Et voici un exemple d'un site dynamique](https://www.facebook.com/)
 
+<br/>
 
 ## 2. Le MVC
 
@@ -51,8 +55,12 @@ Vous l'aurez donc compris, cette architecture va être utilisée dans la créati
 
 #### Illustration 
 
+<br/>
+
 ![Schéma du MVC](http://french.railstutorial.org/images/figures/mvc_detailed.png)
 
+<br/>
+<br/>
 
 ## 3. Les routes
 
@@ -83,6 +91,7 @@ root 'ExempleController#exempleFonction'
 resources :exempleControllers
 ```
 
+<br/>
 
 ## 4. Les Base de Données
 
@@ -104,6 +113,7 @@ Grâce à l'**ID**, nous pourrons récupérer les données que l'on souhaite.
 
 Ensuite, une fois les données récupérées, nous pourrons récupérer **leurs caractéristiques**.
 
+<br/>
 
 ## 5. GET / POST
 
@@ -119,6 +129,7 @@ _Ces données sont invisibles_
 
 Cette requête est utilisée la plupart du temps pour _créer_ une nouvelle resource ou pour en _modifier_ une déjà existante.
 
+<br/>
 
 ## 6. Le concept de migration
 
@@ -163,6 +174,7 @@ end
 
 Enfin, il suffit de taper la commande `db:migrate` dans la _console_.
 
+<br/>
 
 ## 7. Les relations entre les models des BDD
 
