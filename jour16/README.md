@@ -82,3 +82,87 @@ root 'ExempleController#exempleFonction'
 ```ruby
 resources :exempleControllers
 ```
+
+
+## 4. Les Base de Données
+
+#### Intérêts
+
+Une **Base de Données** est un ensemble structuré et organisé de données.
+
+De ce fait, les programmes intéragissants avec des Base de Données vont pouvoir accéder facilement aux données voulues.
+
+Evidemment, cet ensemble est utilisé pour les sites **dynamiques**.
+
+#### Fonctionnement
+
+On peut par exemple se représenter une Base de Données comme un _spreadsheet drive_.
+
+Les données vont posséder une **ID**, ainsi que **différentes caractéristiques**.
+
+Grâce à l'**ID**, nous pourrons récupérer les données que l'on souhaite.
+
+Ensuite, une fois les données récupérées, nous pourrons récupérer **leurs caractéristiques**.
+
+
+## 5. GET / POST
+
+**GET** et **POST** sont deux requêtes.
+
+La requête **GET** récupère des données ajoutées à l'URI (URL ou URN).
+
+_Ces données sont visibles par tous_
+
+La requête **POST** récupère des données inscrites dans un formulaire.
+
+_Ces données sont invisibles_
+
+Cette requête est utilisée la plupart du temps pour _créer_ une nouvelle resource ou pour en _modifier_ une déjà existante.
+
+
+## 6. Le concept de migration
+
+#### Intérêts
+
+Les migrations permettent de **faire évoluer les schémas de Base de Données** au fil du temps.
+
+On peut voir cela comme une _simplification du language_ pour la modification de Bases de Données.
+
+Aussi, les migrations permettent aux modifications apportées d'être **indépendantes** de la Base de Donnée.
+
+#### Fonctionnement
+
+Pour faire des **migrations**, il faut tout d'abord **renseigner les caractéristiques** des Bases de Données que l'on veut migrer dans le fichier _db/migrate/schema.rb_. 
+
+Ces **caractéristiques** doivent êtres renseignées dans le bloc
+```ruby
+create_table "articles", force: :cascade do |t|
+end
+```
+Lui-même inclut dans le bloc
+```ruby
+ActiveRecord::Schema.define(version: 20180129144122) do
+end
+```
+
+**Exemple :**
+
+Pour créer une Base de Données contenant des _articles_ qui possèdent un titre, un corpus, une date de création et une date de modification, il faut taper :
+```ruby
+ActiveRecord::Schema.define(version: 20180129144122) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+end
+```
+
+Enfin, il suffit de taper la commande `db:migrate` dans la _console_.
+
+
+## 7. Les relations entre les models des BDD
+
