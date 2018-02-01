@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20180201151549) do
   create_table "lessons", force: :cascade do |t|
     t.string "title"
     t.text "body"
+    t.integer "cour_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cour_id"], name: "index_lessons_on_cour_id"
   end
 
 end
