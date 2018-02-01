@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	before_save { self.email = email.downcase }
 	has_many :pins
 	validates :pseudo, presence: true, uniqueness: { case_sensitive: false },
 				length: { in: 4...12 }
@@ -7,5 +8,5 @@ class User < ApplicationRecord
 				format: { with: VALID_EMAIL_REGEX }
 	validates :password, presence: true, confirmation: true,
 				length: { in: 6...16 }
-	validates :password_confirmation, presence: true
+	has_secure_password
 end
