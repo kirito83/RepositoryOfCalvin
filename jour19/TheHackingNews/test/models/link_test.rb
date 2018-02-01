@@ -1,7 +1,14 @@
 require 'test_helper'
 
 class LinkTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  def setup
+    @link = Link.new(url: "http://lelien.poste.com")
+  end
+
+  test "pseudo should be present" do 
+  	@link.url = "     "
+  	assert_not @link.valid?
+  end
+  
 end
